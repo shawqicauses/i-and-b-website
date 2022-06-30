@@ -1,6 +1,5 @@
 import { Fragment } from "react"
-import Header from "../components/header"
-import Navbar from "../components/navbar"
+import { Header, Navbar } from "../components/components"
 
 function Home() {
   return (

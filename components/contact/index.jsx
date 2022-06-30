@@ -78,16 +78,20 @@ function Contact() {
     <Link key={index} href={to}>
       <a
         className={classes(
-          "flex items-center justify-center gap-5",
+          "group flex items-center justify-center gap-5",
           "border-2 border-zinc-100 px-8 py-6",
-          "lg:border-0 lg:border-transparent lg:px-0 lg:py-0",
-          "outline-none transition-all"
+          "text-zinc-900 outline-none transition-all",
+          "hover:-translate-y-1 hover:text-teal-500",
+          "focus:translate-y-0.5 focus:text-zinc-900",
+          "lg:border-0 lg:border-transparent lg:px-0 lg:py-0"
         )}>
         {icon}
         <span
           className={classes(
             "text-xl font-medium leading-none",
-            "not-italic text-zinc-900 no-underline"
+            "not-italic text-current no-underline",
+            "group-focus:underline group-focus:decoration-2",
+            "group-focus:decoration-teal-500 group-focus:underline-offset-2"
           )}>
           {name}
         </span>

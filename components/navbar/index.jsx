@@ -10,6 +10,21 @@ function Navbar() {
     { name: "Removal", to: "#removal" }
   ]
 
+  const items = links.map(({ name, to }, index) => (
+    <Link key={index} href={to}>
+      <a
+        className={classes(
+          "text-base font-medium leading-none",
+          "uppercase tracking-[0.2em] text-white",
+          "transform outline-none transition-all",
+          "hover:-translate-y-1 hover:text-teal-300",
+          "focus:translate-y-0.5 focus:text-teal-500"
+        )}>
+        {name}
+      </a>
+    </Link>
+  ))
+
   return (
     <nav
       className={classes(
@@ -37,20 +52,7 @@ function Navbar() {
             "items-center justify-center gap-5",
             "sm:flex md:w-max md:gap-10"
           )}>
-          {links.map(({ name, to }, index) => (
-            <Link key={index} href={to}>
-              <a
-                className={classes(
-                  "text-base font-medium leading-none",
-                  "uppercase tracking-[0.2em] text-white",
-                  "transform outline-none transition-all",
-                  "hover:-translate-y-1 hover:text-teal-300",
-                  "focus:translate-y-0.5 focus:text-teal-500"
-                )}>
-                {name}
-              </a>
-            </Link>
-          ))}
+          {items}
         </ul>
       </div>
     </nav>

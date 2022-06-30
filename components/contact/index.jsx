@@ -74,6 +74,27 @@ function Contact() {
     }
   ]
 
+  const items = information.map(({ name, to, icon }, index) => (
+    <Link key={index} href={to}>
+      <a
+        className={classes(
+          "flex items-center justify-center gap-5",
+          "border-2 border-zinc-100 px-8 py-6",
+          "lg:border-0 lg:border-transparent lg:px-0 lg:py-0",
+          "outline-none transition-all"
+        )}>
+        {icon}
+        <span
+          className={classes(
+            "text-xl font-medium leading-none",
+            "not-italic text-zinc-900 no-underline"
+          )}>
+          {name}
+        </span>
+      </a>
+    </Link>
+  ))
+
   return (
     <section
       className={classes(
@@ -85,26 +106,7 @@ function Contact() {
           "wrapper grid grid-cols-1 gap-5",
           "md:grid-cols-2 lg:grid-cols-3 lg:gap-10"
         )}>
-        {information.map(({ name, to, icon }, index) => (
-          <Link key={index} href={to}>
-            <a
-              className={classes(
-                "flex items-center justify-center gap-5",
-                "border-2 border-zinc-100 px-8 py-6",
-                "lg:border-0 lg:border-transparent lg:px-0 lg:py-0",
-                "outline-none transition-all"
-              )}>
-              {icon}
-              <span
-                className={classes(
-                  "text-xl font-medium leading-none",
-                  "not-italic text-zinc-900 no-underline"
-                )}>
-                {name}
-              </span>
-            </a>
-          </Link>
-        ))}
+        {items}
       </div>
     </section>
   )

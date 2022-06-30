@@ -12,6 +12,19 @@ function Header() {
     { name: "Contact us", to: "#contact", primary: false }
   ]
 
+  const items = buttons.map(({ name, to, primary }, index) => (
+    <Link key={index} href={to}>
+      <a
+        className={classes(
+          primary ? "button-primary" : "button-white",
+          "button inline-block w-full",
+          "text-center sm:w-max"
+        )}>
+        {name}
+      </a>
+    </Link>
+  ))
+
   return (
     <header
       style={{ background }}
@@ -58,18 +71,7 @@ function Header() {
             "items-center justify-center gap-3",
             "sm:w-max sm:flex-row"
           )}>
-          {buttons.map(({ name, to, primary }, index) => (
-            <Link key={index} href={to}>
-              <a
-                className={classes(
-                  primary ? "button-primary" : "button-white",
-                  "button inline-block w-full",
-                  "text-center sm:w-max"
-                )}>
-                {name}
-              </a>
-            </Link>
-          ))}
+          {items}
         </div>
       </div>
     </header>

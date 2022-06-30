@@ -1,11 +1,12 @@
 import { Fragment } from "react"
-import { Header, Navbar } from "../components/components"
+import { Contact, Header, Navbar } from "../components/components"
 
 function Home() {
   return (
     <Fragment>
       <Navbar />
       <Header />
+      <Contact />
     </Fragment>
   )
 }

@@ -9,7 +9,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-8 w-8 stroke-teal-500")}
+          className={classes("h-7 w-7 stroke-teal-500", "md:h-8 md:w-8")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -31,7 +31,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-8 w-8 stroke-teal-500")}
+          className={classes("h-7 w-7 stroke-teal-500", "md:h-8 md:w-8")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -52,7 +52,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-8 w-8 stroke-teal-500")}
+          className={classes("h-7 w-7 stroke-teal-500", "md:h-8 md:w-8")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>

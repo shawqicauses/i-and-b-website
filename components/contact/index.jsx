@@ -9,7 +9,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-7 w-7 stroke-teal-500", "md:h-8 md:w-8")}
+          className={classes("h-5 w-5 stroke-current", "md:h-6 md:w-6")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -31,7 +31,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-7 w-7 stroke-teal-500", "md:h-8 md:w-8")}
+          className={classes("h-5 w-5 stroke-current", "md:h-6 md:w-6")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -52,7 +52,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-7 w-7 stroke-teal-500", "md:h-8 md:w-8")}
+          className={classes("h-5 w-5 stroke-current", "md:h-6 md:w-6")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -81,11 +81,18 @@ function Contact() {
           "group flex items-center justify-center gap-5",
           "border-2 border-zinc-100 px-8 py-6",
           "text-zinc-900 outline-none transition-all",
-          "hover:-translate-y-1 hover:text-teal-500",
+          "hover:-translate-y-1 hover:text-zinc-900",
           "focus:translate-y-0.5 focus:text-zinc-900",
           "lg:border-0 lg:border-transparent lg:px-0 lg:py-0"
         )}>
-        {icon}
+        <div
+          className={classes(
+            "flex items-center justify-center text-teal-500",
+            "lg:h-12 lg:w-12 lg:rounded-full lg:bg-teal-50 lg:transition",
+            "lg:group-hover:bg-teal-500 lg:group-hover:text-white"
+          )}>
+          {icon}
+        </div>
         <span
           className={classes(
             "text-xl font-medium leading-none",

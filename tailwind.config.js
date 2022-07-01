@@ -75,8 +75,18 @@ module.exports = {
       "extra-bold": 800,
       "black": 900
     },
+    borderRadius: {
+      "none": "0rem",
+      "sm": "0.125rem",
+      "base": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "xl-2": "1rem",
+      "xl-3": "1.5rem",
+      "full": "100rem"
+    },
     columns: {},
-    borderRadius: {},
     boxShadow: {},
     dropShadow: {},
     blur: {}

@@ -29,14 +29,7 @@ module.exports = {
       "xl-7": "80rem",
       "full": "100%",
       "min": "min-content",
-      "max": "max-content",
-      "fit": "fit-content",
-      "prose": "65ch",
-      "screen-sm": "640px",
-      "screen-md": "768px",
-      "screen-lg": "1024px",
-      "screen-xl": "1280px",
-      "screen-xl-2": "1536px"
+      "max": "max-content"
     },
     fontFamily: {
       "poppins": "poppins, sans-serif",
@@ -56,13 +49,7 @@ module.exports = {
       "xl-7": "4.5rem",
       "xl-8": "6rem",
       "xl-9": "6.75rem",
-      "xl-10": "7.5rem",
-      "xl-11": "8.25rem",
-      "xl-12": "9rem",
-      "xl-13": "9.75rem",
-      "xl-14": "10.5rem",
-      "xl-15": "11.25rem",
-      "xl-16": "12rem"
+      "xl-10": "7.5rem"
     },
     fontWeight: {
       "thin": 100,
@@ -86,7 +73,20 @@ module.exports = {
       "xl-3": "1.5rem",
       "full": "100rem"
     },
-    columns: {},
+    columns: {
+      1: "1",
+      2: "2",
+      3: "3",
+      4: "4",
+      5: "5",
+      6: "6",
+      7: "7",
+      8: "8",
+      9: "9",
+      10: "10",
+      11: "11",
+      12: "12"
+    },
     boxShadow: {},
     dropShadow: {},
     blur: {}

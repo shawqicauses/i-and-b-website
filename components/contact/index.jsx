@@ -95,7 +95,7 @@ function Contact() {
         </div>
         <span
           className={classes(
-            "text-xl font-medium leading-none",
+            "text-lg font-medium leading-none md:text-xl",
             "not-italic text-current no-underline",
             "group-focus:underline group-focus:decoration-2",
             "group-focus:decoration-teal-500 group-focus:underline-offset-2"

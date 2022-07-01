@@ -16,9 +16,12 @@ function Navbar() {
         className={classes(
           "text-base font-medium leading-none",
           "uppercase tracking-[0.2em] text-white",
+          "underline underline-offset-4",
+          "decoration-transparent decoration-2",
           "transform outline-none transition-all",
           "hover:-translate-y-1 hover:text-teal-300",
-          "focus:translate-y-0.5 focus:text-teal-500"
+          "hover:decoration-white focus:decoration-transparent",
+          "focus:translate-y-0.5 focus:text-teal-300"
         )}>
         {name}
       </a>

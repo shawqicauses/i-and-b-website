@@ -15,7 +15,7 @@ class MyDocument extends Document {
         <Head>
           <link href={font} rel="stylesheet" />
         </Head>
-        <body className="bg-white font-poppins">
+        <body className="bg-zinc-50 font-poppins">
           <Main />
           <NextScript />
         </body>

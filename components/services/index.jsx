@@ -42,17 +42,23 @@ function Services() {
   const items = data.map(({ title, description }, index) => (
     <div
       key={index}
-      className={classes("flex flex-col items-start justify-start")}>
+      className={classes("group flex flex-col items-start justify-start")}>
       <span
         className={classes(
           "mb-5 h-16 w-16",
           "flex items-center justify-center",
-          "rounded-xl-2 bg-teal-50 text-teal-600",
+          "bg-white text-teal-600",
+          "rounded-xl-2 shadow-lg transition-all",
+          "group-hover:bg-teal-500 group-hover:text-white",
           "md:h-[4.5rem] md:w-[4.5rem] xl:mb-7"
         )}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-7 w-7 stroke-current", "mb:h-8 mb:w-8")}
+          className={classes(
+            "h-7 w-7 stroke-current",
+            "transition-all group-hover:-translate-y-0",
+            "md:h-8 md:w-8 md:group-hover:-translate-y-0.5"
+          )}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -76,7 +82,7 @@ function Services() {
       </h3>
       <p
         className={classes(
-          "text-base font-normal leading-relaxed",
+          "max-w-xl text-base font-normal leading-relaxed",
           "text-left not-italic no-underline",
           "text-zinc-500 md:text-lg"
         )}>
@@ -88,6 +94,35 @@ function Services() {
   return (
     <section className={classes("my-16 py-16")}>
       <div className={classes("wrapper")}>
+        <div
+          className={classes(
+            "flex flex-col items-start justify-start",
+            "mb-16 md:items-center md:justify-center"
+          )}>
+          <p
+            className={classes(
+              "text-base font-medium leading-none",
+              "mb-5 uppercase tracking-[0.3em] text-zinc-500",
+              "md:text-lg"
+            )}>
+            Company Services
+          </p>
+          <h2
+            className={classes(
+              "title-2 non-italic no-underline",
+              "text-left text-zinc-900 md:text-center"
+            )}>
+            Let us introduce the things we can do in{" "}
+            <span
+              className={classes(
+                "underline underline-offset-2",
+                "decoration-teal-500 decoration-2"
+              )}>
+              I and B
+            </span>{" "}
+            company
+          </h2>
+        </div>
         <div
           className={classes(
             "grid grid-cols-1 gap-10",

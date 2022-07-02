@@ -4,13 +4,19 @@
 
 @layer components {
   .wrapper {
-    @apply container mx-auto px-5 xl-2:max-w-xl-7;
+    @apply container mx-auto px-5
+    sm:px-12 md:px-10 xl-2:max-w-xl-7;
   }
 
   .title-1 {
     @apply max-w-lg text-xl-4 font-bold
     leading-[1.15] tracking-tight md:max-w-xl-2
     md:text-xl-5 xl:max-w-xl-4 xl:text-xl-6;
+  }
+
+  .title-2 {
+    @apply max-w-sm text-xl-2 font-semi-bold leading-tight
+    tracking-tight md:max-w-md md:text-[1.75rem];
   }
 
   .paragraph {

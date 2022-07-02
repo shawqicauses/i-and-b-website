@@ -9,7 +9,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-5 w-5 stroke-current", "md:h-6 md:w-6")}
+          className={classes("h-6 w-6 stroke-current")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -31,7 +31,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-5 w-5 stroke-current", "md:h-6 md:w-6")}
+          className={classes("h-6 w-6 stroke-current")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -52,7 +52,7 @@ function Contact() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={classes("h-5 w-5 stroke-current", "md:h-6 md:w-6")}
+          className={classes("h-6 w-6 stroke-current")}
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}>
@@ -79,26 +79,25 @@ function Contact() {
       <a
         className={classes(
           "group flex items-center justify-center gap-5",
-          "border-2 border-zinc-100 px-8 py-6",
-          "text-zinc-900 outline-none transition-all",
-          "hover:-translate-y-1 hover:text-zinc-900",
-          "focus:translate-y-0.5 focus:text-zinc-900",
-          "lg:border-0 lg:border-transparent lg:px-0 lg:py-0"
+          "rounded-lg bg-teal-400 px-8 py-6",
+          "text-white outline-none transition-all",
+          "hover:-translate-y-1 focus:translate-y-0.5",
+          "lg:bg-transparent lg:px-0 lg:py-0"
         )}>
         <div
           className={classes(
-            "flex items-center justify-center text-teal-500",
-            "lg:h-12 lg:w-12 lg:rounded-full lg:bg-teal-50 lg:transition",
-            "lg:group-hover:bg-teal-500 lg:group-hover:text-white"
+            "flex items-center justify-center text-white",
+            "lg:h-12 lg:w-12 lg:rounded-full lg:bg-teal-600 lg:transition",
+            "lg:group-hover:bg-teal-700 lg:group-hover:text-white"
           )}>
           {icon}
         </div>
         <span
           className={classes(
             "text-lg font-medium leading-none md:text-xl",
-            "not-italic text-current no-underline",
-            "group-focus:underline group-focus:decoration-2",
-            "group-focus:decoration-teal-500 group-focus:underline-offset-2"
+            "not-italic text-current text-white no-underline",
+            "group-focus:underline group-focus:underline-offset-2",
+            "group-focus:decoration-teal-700 group-focus:decoration-2"
           )}>
           {name}
         </span>
@@ -110,7 +109,7 @@ function Contact() {
     <section
       className={classes(
         "flex items-center justify-center",
-        "bg-white py-10 md:py-12 lg:py-16"
+        "bg-teal-500 py-10 md:py-12 lg:py-16"
       )}>
       <div
         className={classes(

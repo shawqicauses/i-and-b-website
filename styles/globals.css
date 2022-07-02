@@ -29,15 +29,15 @@
   }
 
   .button-primary {
-    @apply border-teal-500 bg-teal-500 text-white
-    hover:border-white hover:bg-white hover:text-zinc-900
-    focus:border-zinc-900 focus:bg-zinc-900 focus:text-white;
+    @apply rounded-lg border-teal-500 bg-teal-500
+    text-white hover:border-white hover:bg-white
+    hover:text-zinc-900 focus:border-zinc-900 focus:bg-zinc-900 focus:text-white;
   }
 
   .button-secondary {
-    @apply border-zinc-900 bg-transparent text-zinc-900
-    hover:border-zinc-900 hover:bg-zinc-900 hover:text-white
-    focus:border-white focus:bg-white focus:text-zinc-900;
+    @apply rounded-lg border-zinc-900 bg-transparent
+    text-zinc-900 hover:border-zinc-900 hover:bg-zinc-900
+    hover:text-white focus:border-white focus:bg-white focus:text-zinc-900;
   }
 
   .button-tertiary {
@@ -47,8 +47,8 @@
   }
 
   .button-white {
-    @apply border-white bg-white text-zinc-900
-    hover:border-white hover:bg-transparent hover:text-white
-    focus:border-zinc-900 focus:bg-zinc-900 focus:text-white;
+    @apply rounded-lg border-white bg-white
+    text-zinc-900 hover:border-white hover:bg-transparent
+    hover:text-white focus:border-zinc-900 focus:bg-zinc-900 focus:text-white;
   }
 }

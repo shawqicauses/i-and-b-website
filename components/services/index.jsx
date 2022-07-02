@@ -47,7 +47,7 @@ function Services() {
         className={classes(
           "mb-5 h-16 w-16",
           "flex items-center justify-center",
-          "rounded-xl-2 bg-white text-teal-500",
+          "rounded-xl-2 bg-teal-50 text-teal-600",
           "md:h-[4.5rem] md:w-[4.5rem] xl:mb-7"
         )}>
         <svg

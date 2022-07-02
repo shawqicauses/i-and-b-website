@@ -82,7 +82,8 @@ function Contact() {
           "rounded-lg bg-teal-400 px-8 py-6",
           "text-white outline-none transition-all",
           "hover:-translate-y-1 focus:translate-y-0.5",
-          "lg:bg-transparent lg:px-0 lg:py-0"
+          "lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0",
+          "focus:bg-teal-600 lg:focus:bg-transparent"
         )}>
         <div
           className={classes(
@@ -96,7 +97,6 @@ function Contact() {
           className={classes(
             "text-lg font-medium leading-none md:text-xl",
             "not-italic text-current text-white no-underline",
-            "group-focus:underline group-focus:underline-offset-2",
             "group-focus:decoration-teal-700 group-focus:decoration-2"
           )}>
           {name}

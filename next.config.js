@@ -1,5 +1,8 @@
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    domains: ["images.unsplash.com"]
+  }
 }
 
 module.exports = nextConfig

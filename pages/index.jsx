@@ -1,5 +1,11 @@
 import { Fragment } from "react"
-import { Contact, Header, Navbar, Services } from "../components/components"
+import {
+  Contact,
+  Gallery,
+  Header,
+  Navbar,
+  Services
+} from "../components/components"
 
 function Home() {
   return (
@@ -8,6 +14,7 @@ function Home() {
       <Header />
       <Contact />
       <Services />
+      <Gallery />
     </Fragment>
   )
 }

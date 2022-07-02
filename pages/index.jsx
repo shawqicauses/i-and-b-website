@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { Contact, Header, Navbar } from "../components/components"
+import { Contact, Header, Navbar, Services } from "../components/components"
 
 function Home() {
   return (
@@ -7,6 +7,7 @@ function Home() {
       <Navbar />
       <Header />
       <Contact />
+      <Services />
     </Fragment>
   )
 }

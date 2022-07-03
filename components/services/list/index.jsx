@@ -1,3 +1,4 @@
+import { HeartIcon } from "@heroicons/react/outline"
 import { classes } from "../../../utils/utils"
 
 function List() {
@@ -52,25 +53,14 @@ function List() {
           "group-hover:bg-teal-500 group-hover:text-white",
           "md:h-[4.5rem] md:w-[4.5rem] xl:mb-7"
         )}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
+        <HeartIcon
           className={classes(
             "h-7 w-7 stroke-current",
             "transition-all group-hover:-translate-y-0",
             "md:h-8 md:w-8 md:group-hover:-translate-y-0.5"
           )}
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d={[
-              "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0",
-              "00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            ].join(" ")}
-          />
-        </svg>
+          strokeWidth={1.5}
+        />
       </span>
       <h3
         className={classes(

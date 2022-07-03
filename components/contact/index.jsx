@@ -10,17 +10,21 @@ import { classes } from "../../utils/utils"
 
 function Contact() {
   useEffect(() => {
-    const animation = { opacity: 1, transform: "none" }
-    const duration = 0.4
-    const easing = "ease-in-out"
-
-    inView(".contact-animation", ({ target }) => {
-      animate(target.querySelectorAll(".item-animation"), animation, {
-        delay: stagger(0.2),
-        duration,
-        easing
-      })
-    })
+    inView(
+      ".contact-animation",
+      ({ target }) => {
+        animate(
+          target.querySelectorAll(".item-animation"),
+          { opacity: 1, transform: "none" },
+          {
+            delay: stagger(0.2),
+            duration: 0.4,
+            easing: "ease-in-out"
+          }
+        )
+      },
+      { amount: 1 }
+    )
   })
 
   const information = [

@@ -6,24 +6,28 @@ import { classes } from "../../utils/utils"
 
 function Header() {
   useEffect(() => {
+    const animation = { opacity: 1, transform: "none" }
+    const duration = 0.4
+    const easing = "ease-in-out"
+
     inView(".header-animation", ({ target }) => {
-      animate(
-        target.querySelector(".title-animation"),
-        { opacity: 1, transform: "none" },
-        { delay: 0, duration: 0.4, easing: "ease-in-out" }
-      )
+      animate(target.querySelector(".title-animation"), animation, {
+        delay: 0,
+        duration,
+        easing
+      })
 
-      animate(
-        target.querySelector(".paragraph-animation"),
-        { opacity: 1, transform: "none" },
-        { delay: 0.2, duration: 0.4, easing: "ease-in-out" }
-      )
+      animate(target.querySelector(".paragraph-animation"), animation, {
+        delay: 0.2,
+        duration,
+        easing
+      })
 
-      animate(
-        target.querySelector(".buttons-animation"),
-        { opacity: 1, transform: "none" },
-        { delay: 0.4, duration: 0.4, easing: "ease-in-out" }
-      )
+      animate(target.querySelector(".buttons-animation"), animation, {
+        delay: 0.4,
+        duration,
+        easing
+      })
     })
   })
 

@@ -1,8 +1,32 @@
 import { LinkIcon, PaperClipIcon } from "@heroicons/react/outline"
+import { animate, inView } from "motion"
 import Link from "next/link"
+import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
 function Header() {
+  useEffect(() => {
+    inView(".header-animation", ({ target }) => {
+      animate(
+        target.querySelector(".title-animation"),
+        { opacity: 1, transform: "none" },
+        { delay: 0, duration: 0.4, easing: "ease-in-out" }
+      )
+
+      animate(
+        target.querySelector(".paragraph-animation"),
+        { opacity: 1, transform: "none" },
+        { delay: 0.2, duration: 0.4, easing: "ease-in-out" }
+      )
+
+      animate(
+        target.querySelector(".buttons-animation"),
+        { opacity: 1, transform: "none" },
+        { delay: 0.4, duration: 0.4, easing: "ease-in-out" }
+      )
+    })
+  })
+
   const color = `rgba(0, 0, 0, 0.7)`
   const id = `photo-1587582423116-ec07293f0395`
   const image = `https://images.unsplash.com/${id}`
@@ -41,7 +65,7 @@ function Header() {
     <header
       style={{ background }}
       className={classes(
-        "h-full min-h-screen py-40",
+        "header-animation h-full min-h-screen py-40",
         "flex items-center justify-center",
         "!bg-cover !bg-center !bg-no-repeat"
       )}>
@@ -53,9 +77,10 @@ function Header() {
         )}>
         <h1
           className={classes(
-            "title-1 not-italic no-underline",
-            "mb-5 text-white",
-            "text-left sm:text-center"
+            "title-1 title-animation",
+            "not-italic text-white no-underline",
+            "mb-5 text-left sm:text-center",
+            "translate-y-4 transform opacity-0"
           )}>
           We are{" "}
           <span
@@ -70,9 +95,10 @@ function Header() {
         </h1>
         <p
           className={classes(
-            "paragraph not-italic no-underline",
-            "mb-10 text-zinc-300",
-            "text-left sm:text-center"
+            "paragraph paragraph-animation",
+            "not-italic text-zinc-300 no-underline",
+            "mb-10 text-left sm:text-center",
+            "translate-y-4 transform opacity-0"
           )}>
           The asbestos removal services in I and B is an experienced team
           providing a comprehensive and professional asbestos removal and
@@ -80,9 +106,10 @@ function Header() {
         </p>
         <div
           className={classes(
-            "flex w-full flex-col",
+            "buttons-animation flex w-full flex-col",
             "items-center justify-center gap-3",
-            "sm:w-max sm:flex-row"
+            "sm:w-max sm:flex-row",
+            "translate-y-4 transform opacity-0"
           )}>
           {items}
         </div>

@@ -1,3 +1,4 @@
+import { LinkIcon, PaperClipIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 import { classes } from "../../utils/utils"
 
@@ -8,19 +9,30 @@ function Header() {
   const background = `linear-gradient(to right bottom, ${color}, ${color}), url("${image}")`
 
   const buttons = [
-    { name: "Learn more", to: "#about", primary: true },
-    { name: "Contact us", to: "#contact", primary: false }
+    {
+      name: "Learn more",
+      to: "#about",
+      icon: <PaperClipIcon className={classes("h-5 w-5")} strokeWidth={1.5} />,
+      primary: true
+    },
+    {
+      name: "Contact us",
+      to: "#contact",
+      icon: <LinkIcon className={classes("h-5 w-5")} strokeWidth={1.5} />,
+      primary: false
+    }
   ]
 
-  const items = buttons.map(({ name, to, primary }, index) => (
+  const items = buttons.map(({ name, to, icon, primary }, index) => (
     <Link key={index} href={to}>
       <a
         className={classes(
           primary ? "button-primary" : "button-white",
-          "button inline-block w-full",
-          "text-center sm:w-max"
+          "button flex items-center justify-center gap-3",
+          "w-full text-center sm:w-max"
         )}>
-        {name}
+        {icon}
+        <span>{name}</span>
       </a>
     </Link>
   ))

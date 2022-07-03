@@ -3,10 +3,26 @@ import {
   MailIcon,
   PhoneIcon
 } from "@heroicons/react/outline"
+import { animate, inView, stagger } from "motion"
 import Link from "next/link"
+import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
 function Contact() {
+  useEffect(() => {
+    const animation = { opacity: 1, transform: "none" }
+    const duration = 0.4
+    const easing = "ease-in-out"
+
+    inView(".contact-animation", ({ target }) => {
+      animate(target.querySelectorAll(".item-animation"), animation, {
+        delay: stagger(0.2),
+        duration,
+        easing
+      })
+    })
+  })
+
   const information = [
     {
       name: "Phone Number",
@@ -44,12 +60,12 @@ function Contact() {
     <Link key={index} href={to}>
       <a
         className={classes(
-          "group flex items-center justify-center gap-5",
+          "item-animation group flex",
+          "items-center justify-center gap-5",
           "rounded-lg bg-teal-400 px-8 py-6",
-          "text-white outline-none transition-all",
-          "hover:-translate-y-1 focus:translate-y-0.5",
-          "lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0",
-          "focus:bg-teal-600 lg:focus:bg-transparent"
+          "text-white outline-none",
+          "translate-y-4 transform opacity-0",
+          "lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0"
         )}>
         <div
           className={classes(
@@ -74,7 +90,8 @@ function Contact() {
   return (
     <section
       className={classes(
-        "flex items-center justify-center bg-teal-500",
+        "contact-animation flex bg-teal-500",
+        "items-center justify-center",
         "mb-12 py-10 md:mb-16 md:py-12 lg:mb-20 lg:py-16"
       )}>
       <div

@@ -3,12 +3,13 @@ import List from "./list"
 
 function Services() {
   return (
-    <section className={classes("my-10 py-10 md:my-16 md:py-16")}>
+    <section
+      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
       <div className={classes("wrapper")}>
         <div
           className={classes(
             "flex flex-col items-start justify-start",
-            "mb-16 md:items-center md:justify-center"
+            "mb-12 md:mb-16 md:items-center md:justify-center lg:mb-20"
           )}>
           <p
             className={classes(

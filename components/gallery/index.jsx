@@ -3,7 +3,8 @@ import List from "./list"
 
 function Gallery() {
   return (
-    <section className={classes("my-10 py-10 md:my-16 md:py-16")}>
+    <section
+      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
       <div className={classes("wrapper")}>
         <List />
       </div>

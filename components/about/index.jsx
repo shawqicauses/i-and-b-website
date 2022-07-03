@@ -2,12 +2,13 @@ import { classes } from "../../utils/utils"
 
 function About() {
   return (
-    <section className={classes("my-10 py-10 md:my-16 md:py-16")}>
+    <section
+      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
       <div className={classes("wrapper")}>
         <div
           className={classes(
             "grid grid-cols-1 gap-10",
-            "xl:grid-cols-2 xl:gap-20"
+            "lg:grid-cols-2 lg:gap-20"
           )}>
           <div className={classes("flex flex-col items-start justify-start")}>
             <p
@@ -17,7 +18,7 @@ function About() {
               )}>
               What we do
             </p>
-            <h2 className={classes("title-2 mb-6 max-w-sm")}>
+            <h2 className={classes("title-2 mb-6 max-w-xs md:max-w-sm")}>
               We are professional in asbestos removal
             </h2>
             <p

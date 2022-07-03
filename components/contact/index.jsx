@@ -74,8 +74,8 @@ function Contact() {
   return (
     <section
       className={classes(
-        "flex items-center justify-center",
-        "bg-teal-500 py-10 md:py-12 lg:py-16"
+        "flex items-center justify-center bg-teal-500",
+        "mb-12 py-10 md:mb-16 md:py-12 lg:mb-20 lg:py-16"
       )}>
       <div
         className={classes(

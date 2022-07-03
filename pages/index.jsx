@@ -5,6 +5,7 @@ import {
   Gallery,
   Header,
   Navbar,
+  Removal,
   Services
 } from "../components/components"
 
@@ -17,6 +18,7 @@ function Home() {
       <Services />
       <Gallery />
       <About />
+      <Removal />
     </Fragment>
   )
 }

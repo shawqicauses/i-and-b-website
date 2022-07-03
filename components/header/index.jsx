@@ -12,19 +12,19 @@ function Header() {
 
     inView(".header-animation", ({ target }) => {
       animate(target.querySelector(".title-animation"), animation, {
-        delay: 0,
+        delay: 1,
         duration,
         easing
       })
 
       animate(target.querySelector(".paragraph-animation"), animation, {
-        delay: 0.2,
+        delay: 1.2,
         duration,
         easing
       })
 
       animate(target.querySelector(".buttons-animation"), animation, {
-        delay: 0.4,
+        delay: 1.4,
         duration,
         easing
       })

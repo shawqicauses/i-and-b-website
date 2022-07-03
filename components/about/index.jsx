@@ -44,10 +44,9 @@ function About() {
                 "text-base font-normal leading-relaxed lg:text-lg",
                 "mb-10 text-left not-italic text-zinc-500 no-underline"
               )}>
-              We are skilled enough to access and remove asbestos in all
-              ceilings, internal walls, and floor coverings. We also target
-              outside areas, like external cladding, eaves, roofing, downpipes,
-              flues, and fences
+              Remove and access asbestos in all ceilings, internal walls, and
+              floor coverings. We also target outside areas, like external
+              cladding, eaves, roofing, downpipes, flues, and fences
             </p>
             <h3
               className={classes(

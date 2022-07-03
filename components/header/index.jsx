@@ -74,8 +74,9 @@ function Header() {
             "mb-10 text-zinc-300",
             "text-left sm:text-center"
           )}>
-          I & B is an asbestos removal services experienced team providing a
-          comprehensive and professional asbestos removal and disposal service
+          The asbestos removal services in I and B is an experienced team
+          providing a comprehensive and professional asbestos removal and
+          disposal service
         </p>
         <div
           className={classes(

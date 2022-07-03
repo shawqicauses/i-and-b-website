@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import {
+  About,
   Contact,
   Gallery,
   Header,
@@ -15,6 +16,7 @@ function Home() {
       <Contact />
       <Services />
       <Gallery />
+      <About />
     </Fragment>
   )
 }

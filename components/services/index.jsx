@@ -3,7 +3,7 @@ import List from "./list"
 
 function Services() {
   return (
-    <section className={classes("my-16 py-16")}>
+    <section className={classes("my-10 py-10 md:my-16 md:py-16")}>
       <div className={classes("wrapper")}>
         <div
           className={classes(

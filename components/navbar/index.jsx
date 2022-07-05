@@ -10,7 +10,7 @@ function Navbar() {
     const easing = "ease-in-out"
 
     inView(".navbar-animation", ({ target }) => {
-      animate(target.querySelector(".logo-animation"), animation, {
+      animate(target.querySelectorAll(".logo-animation"), animation, {
         delay: 0,
         duration,
         easing

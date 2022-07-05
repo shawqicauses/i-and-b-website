@@ -11,19 +11,19 @@ function Header() {
     const easing = "ease-in-out"
 
     inView(".header-animation", ({ target }) => {
-      animate(target.querySelector(".title-animation"), animation, {
+      animate(target.querySelectorAll(".title-animation"), animation, {
         delay: 1,
         duration,
         easing
       })
 
-      animate(target.querySelector(".paragraph-animation"), animation, {
+      animate(target.querySelectorAll(".paragraph-animation"), animation, {
         delay: 1.2,
         duration,
         easing
       })
 
-      animate(target.querySelector(".buttons-animation"), animation, {
+      animate(target.querySelectorAll(".buttons-animation"), animation, {
         delay: 1.4,
         duration,
         easing

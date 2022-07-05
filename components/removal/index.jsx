@@ -1,10 +1,35 @@
+import { animate, inView, stagger } from "motion"
 import Image from "next/image"
+import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
 function Removal() {
+  useEffect(() => {
+    const animation = { opacity: 1, transform: "none" }
+    const duration = 0.4
+    const easing = "ease-in-out"
+
+    inView(".removal-animation", ({ target }) => {
+      animate(target.querySelectorAll(".image-animation"), animation, {
+        delay: 0,
+        duration,
+        easing
+      })
+
+      animate(target.querySelectorAll(".item-animation"), animation, {
+        delay: stagger(0.2),
+        duration,
+        easing
+      })
+    })
+  })
+
   return (
     <section
-      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
+      className={classes(
+        "removal-animation my-4 py-8",
+        "md:my-8 md:py-12 lg:my-10 lg:py-16"
+      )}>
       <div className={classes("wrapper")}>
         <div>
           <div
@@ -17,6 +42,10 @@ function Removal() {
               alt="Asbestos Removal"
               layout="fill"
               objectFit="cover"
+              className={classes(
+                "image-animation object-cover object-center",
+                "translate-y-4 transform opacity-0"
+              )}
             />
           </div>
           <div
@@ -24,7 +53,12 @@ function Removal() {
               "grid grid-cols-1 gap-10",
               "lg:grid-cols-2 lg:gap-20"
             )}>
-            <div className={classes("flex flex-col items-start justify-start")}>
+            <div
+              className={classes(
+                "item-animation flex",
+                "flex-col items-start justify-start",
+                "translate-y-4 transform opacity-0"
+              )}>
               <h2 className={classes("title-2 mb-3 max-w-xs")}>
                 Was your home built before 1987?
               </h2>
@@ -45,7 +79,12 @@ function Removal() {
                 Australian Government
               </span>
             </div>
-            <div>
+            <div
+              className={classes(
+                "item-animation flex",
+                "flex-col items-start justify-center",
+                "translate-y-4 transform opacity-0"
+              )}>
               <p
                 className={classes(
                   "text-base font-normal leading-relaxed lg:text-lg",

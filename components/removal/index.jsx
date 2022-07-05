@@ -26,6 +26,7 @@ function Removal() {
 
   return (
     <section
+      id="removal"
       className={classes(
         "removal-animation my-4 py-8",
         "md:my-8 md:py-12 lg:my-10 lg:py-16"

@@ -11,7 +11,7 @@ const font = [
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="scroll-smooth">
         <Head>
           <link href={font} rel="stylesheet" />
         </Head>

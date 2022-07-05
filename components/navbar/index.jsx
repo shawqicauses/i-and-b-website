@@ -27,7 +27,7 @@ function Navbar() {
   const links = [
     { name: "About", to: "#about" },
     { name: "Services", to: "#services" },
-    { name: "Products", to: "#products" },
+    { name: "Gallery", to: "#gallery" },
     { name: "Inspection", to: "#inspection" },
     { name: "Removal", to: "#removal" }
   ]

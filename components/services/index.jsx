@@ -26,6 +26,7 @@ function Services() {
 
   return (
     <section
+      id="services"
       className={classes(
         "services-animation my-4 py-8",
         "md:my-8 md:py-12 lg:my-10 lg:py-16"

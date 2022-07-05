@@ -1,7 +1,23 @@
 import { HeartIcon } from "@heroicons/react/outline"
+import { animate, inView, stagger } from "motion"
+import { useEffect } from "react"
 import { classes } from "../../../utils/utils"
 
 function List() {
+  useEffect(() => {
+    inView(".services-animation", ({ target }) => {
+      animate(
+        target.querySelectorAll(".item-animation"),
+        { opacity: 1, transform: "none" },
+        {
+          delay: stagger(0.2),
+          duration: 0.4,
+          easing: "ease-in-out"
+        }
+      )
+    })
+  })
+
   const data = [
     {
       title: "Asbestos Abatement",
@@ -43,7 +59,11 @@ function List() {
   const items = data.map(({ title, description }, index) => (
     <div
       key={index}
-      className={classes("group flex flex-col items-start justify-start")}>
+      className={classes(
+        "item-animation group flex",
+        "flex-col items-start justify-start",
+        "translate-y-4 transform opacity-0"
+      )}>
       <span
         className={classes(
           "mb-5 h-16 w-16",
@@ -84,7 +104,7 @@ function List() {
   return (
     <div
       className={classes(
-        "grid grid-cols-1 gap-10",
+        "services-animation grid grid-cols-1 gap-10",
         "md:grid-cols-2 md:gap-16",
         "xl:grid-cols-3 xl:gap-20"
       )}>

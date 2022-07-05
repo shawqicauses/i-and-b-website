@@ -1,10 +1,35 @@
+import { animate, inView } from "motion"
+import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 import List from "./list"
 
 function Services() {
+  useEffect(() => {
+    const animation = { opacity: 1, transform: "none" }
+    const duration = 0.4
+    const easing = "ease-in-out"
+
+    inView(".services-animation", ({ target }) => {
+      animate(target.querySelectorAll(".heading-animation"), animation, {
+        delay: 0.2,
+        duration,
+        easing
+      })
+
+      animate(target.querySelectorAll(".sub-heading-animation"), animation, {
+        delay: 0,
+        duration,
+        easing
+      })
+    })
+  })
+
   return (
     <section
-      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
+      className={classes(
+        "services-animation my-4 py-8",
+        "md:my-8 md:py-12 lg:my-10 lg:py-16"
+      )}>
       <div className={classes("wrapper")}>
         <div
           className={classes(
@@ -13,16 +38,17 @@ function Services() {
           )}>
           <p
             className={classes(
-              "text-base font-medium leading-none",
+              "sub-heading-animation text-base font-medium leading-none",
               "mb-5 uppercase tracking-[0.3em] text-zinc-500",
-              "md:text-lg"
+              "translate-y-4 transform opacity-0 md:text-lg"
             )}>
             Company Services
           </p>
           <h2
             className={classes(
-              "title-2 non-italic no-underline",
-              "text-left text-zinc-900 md:text-center"
+              "heading-animation title-2 non-italic no-underline",
+              "text-left text-zinc-900 md:text-center",
+              "translate-y-4 transform opacity-0"
             )}>
             Let us introduce the things we can do in{" "}
             <span

@@ -1,22 +1,46 @@
+import { animate, inView, stagger } from "motion"
+import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
 function About() {
+  useEffect(() => {
+    inView(".about-animation", ({ target }) => {
+      animate(
+        target.querySelectorAll(".item-animation"),
+        { opacity: 1, transform: "none" },
+        {
+          delay: stagger(0.2),
+          duration: 0.4,
+          easing: "ease-in-out"
+        }
+      )
+    })
+  })
+
   return (
     <section
-      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
+      className={classes(
+        "about-animation my-4 py-8",
+        "md:my-8 md:py-12 lg:my-10 lg:py-16"
+      )}>
       <div className={classes("wrapper")}>
         <div
           className={classes(
             "grid grid-cols-1 gap-10",
             "lg:grid-cols-2 lg:gap-20"
           )}>
-          <div className={classes("flex flex-col items-start justify-start")}>
+          <div
+            className={classes(
+              "item-animation flex",
+              "flex-col items-start justify-start",
+              "translate-y-4 transform opacity-0"
+            )}>
             <p
               className={classes(
                 "text-base font-medium leading-none lg:text-lg",
                 "mb-3 uppercase tracking-[0.3em] text-zinc-500"
               )}>
-              What we do
+              Hmm, who are we
             </p>
             <h2 className={classes("title-2 mb-6 max-w-xs md:max-w-sm")}>
               We are professional in asbestos removal
@@ -32,7 +56,12 @@ function About() {
               your home, which includes the kitchen, bathroom, and laundry
             </p>
           </div>
-          <div>
+          <div
+            className={classes(
+              "item-animation flex",
+              "flex-col items-start justify-center",
+              "translate-y-4 transform opacity-0"
+            )}>
             <h3
               className={classes(
                 "text-xl font-medium leading-tight",

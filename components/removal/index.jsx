@@ -29,7 +29,7 @@ function Removal({ gallery }) {
       id="removal"
       className={classes(
         "removal-animation my-4 py-8",
-        "lg:my-8 lg:py-12 xl:my-10 xl:py-16"
+        "lg:my-10 lg:py-10 xl:my-11 xl:py-12"
       )}>
       <div className={classes("wrapper")}>
         <div

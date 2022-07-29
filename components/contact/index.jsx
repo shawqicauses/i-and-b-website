@@ -96,7 +96,7 @@ function Contact() {
       className={classes(
         "contact-animation flex bg-teal-500",
         "items-center justify-center",
-        "mb-12 py-10 md:mb-16 md:py-12 lg:mb-20 lg:py-16"
+        "mb-12 py-10 lg:mb-20 lg:py-12 xl:mb-[5.75rem] xl:py-16"
       )}>
       <div
         className={classes(

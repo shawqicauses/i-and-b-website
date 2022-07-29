@@ -3,6 +3,7 @@ import { Fragment } from "react"
 import {
   About,
   Contact,
+  Footer,
   Gallery,
   Header,
   Inspection,
@@ -32,6 +33,7 @@ function Home({ gallery }) {
       <About />
       <Removal gallery={gallery} />
       <Inspection gallery={gallery} />
+      <Footer />
     </Fragment>
   )
 }

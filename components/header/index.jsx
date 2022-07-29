@@ -31,7 +31,7 @@ function Header({ gallery }) {
     })
   })
 
-  const color = `rgba(0, 0, 0, 0.7)`
+  const color = `rgba(0, 0, 0, 0.8)`
   const image = gallery && url(gallery[6].fields.image.fields.file.url)
   const background = `linear-gradient(to right bottom, ${color}, ${color}), url("${image}")`
 

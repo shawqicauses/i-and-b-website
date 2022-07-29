@@ -27,7 +27,11 @@ function Inspection({ gallery }) {
             )}
           />
         </div>
-        <div className={classes("flex-1")}>
+        <div
+          className={classes(
+            "item-animation w-full flex-1",
+            "translate-y-4 transform opacity-0"
+          )}>
           <h2 className={classes("title-2 mb-5 max-w-xs lg:mb-10")}>
             Worried you may have asbestos removal?
           </h2>

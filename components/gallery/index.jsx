@@ -5,7 +5,10 @@ function Gallery({ gallery }) {
   return (
     <section
       id="gallery"
-      className={classes("my-4 py-8 md:my-8 md:py-12 lg:my-10 lg:py-16")}>
+      className={classes(
+        "gallery-animation my-4 py-8",
+        "lg:my-8 lg:py-12 xl:my-10 xl:py-16"
+      )}>
       <div className={classes("wrapper")}>
         <List gallery={gallery} />
       </div>

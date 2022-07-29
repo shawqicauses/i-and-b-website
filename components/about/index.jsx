@@ -22,7 +22,7 @@ function About() {
       id="about"
       className={classes(
         "about-animation my-4 py-8",
-        "md:my-8 md:py-12 lg:my-10 lg:py-16"
+        "lg:my-8 lg:py-12 xl:my-10 xl:py-16"
       )}>
       <div className={classes("wrapper")}>
         <div

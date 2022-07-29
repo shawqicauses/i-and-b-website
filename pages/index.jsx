@@ -5,6 +5,7 @@ import {
   Contact,
   Gallery,
   Header,
+  Inspection,
   Navbar,
   Removal,
   Services
@@ -30,6 +31,7 @@ function Home({ gallery }) {
       <Gallery gallery={gallery} />
       <About />
       <Removal gallery={gallery} />
+      <Inspection gallery={gallery} />
     </Fragment>
   )
 }

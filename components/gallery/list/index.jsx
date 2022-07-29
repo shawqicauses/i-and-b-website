@@ -26,10 +26,10 @@ function List({ gallery }) {
           src={url(item.fields.image.fields.file.url)}
           alt={item.fields.image.fields.title}
           layout="fill"
-          objectFit="cover"
           className={classes(
-            "item-animation object-cover object-center",
-            "translate-y-4 transform opacity-0"
+            "item-animation h-full w-full",
+            "transform object-cover object-center",
+            "translate-y-4 translate-x-0 opacity-0"
           )}
         />
       </div>

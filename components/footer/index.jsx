@@ -2,7 +2,7 @@ import { animate, inView } from "motion"
 import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
-function Footer() {
+export default function Footer() {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -65,5 +65,3 @@ function Footer() {
     </section>
   )
 }
-
-export default Footer

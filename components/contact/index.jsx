@@ -8,7 +8,7 @@ import Link from "next/link"
 import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
-function Contact() {
+export default function Contact() {
   useEffect(() => {
     inView(
       ".contact-animation",
@@ -107,5 +107,3 @@ function Contact() {
     </section>
   )
 }
-
-export default Contact

@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useEffect } from "react"
 import { classes, url } from "../../utils/utils"
 
-function Removal({ gallery }) {
+export default function Removal({ gallery }) {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -151,5 +151,3 @@ function Removal({ gallery }) {
     </section>
   )
 }
-
-export default Removal

@@ -2,7 +2,7 @@ import { animate, inView, stagger } from "motion"
 import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
-function About() {
+export default function About() {
   useEffect(() => {
     inView(".about-animation", ({ target }) => {
       animate(
@@ -104,5 +104,3 @@ function About() {
     </section>
   )
 }
-
-export default About

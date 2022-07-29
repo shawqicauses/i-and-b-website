@@ -8,7 +8,7 @@ const font = [
   ].join("&")
 ].join("?")
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   render() {
     return (
       <Html className="scroll-smooth">
@@ -23,5 +23,3 @@ class MyDocument extends Document {
     )
   }
 }
-
-export default MyDocument

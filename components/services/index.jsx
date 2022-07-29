@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 import List from "./list"
 
-function Services() {
+export default function Services() {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -68,5 +68,3 @@ function Services() {
     </section>
   )
 }
-
-export default Services

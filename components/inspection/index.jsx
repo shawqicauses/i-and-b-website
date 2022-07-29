@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { classes, url } from "../../utils/utils"
 
-function Inspection({ gallery }) {
+export default function Inspection({ gallery }) {
   return (
     <section
       id="inspection"
@@ -75,5 +75,3 @@ function Inspection({ gallery }) {
     </section>
   )
 }
-
-export default Inspection

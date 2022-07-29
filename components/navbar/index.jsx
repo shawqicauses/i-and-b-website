@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useEffect } from "react"
 import { classes } from "../../utils/utils"
 
-function Navbar() {
+export default function Navbar() {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -88,5 +88,3 @@ function Navbar() {
     </nav>
   )
 }
-
-export default Navbar

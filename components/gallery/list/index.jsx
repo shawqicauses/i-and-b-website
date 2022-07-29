@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useEffect } from "react"
 import { classes, url } from "../../../utils/utils"
 
-function List({ gallery }) {
+export default function List({ gallery }) {
   useEffect(() => {
     inView(".gallery-animation", ({ target }) => {
       animate(
@@ -45,5 +45,3 @@ function List({ gallery }) {
     </div>
   )
 }
-
-export default List

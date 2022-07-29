@@ -3,7 +3,7 @@ import { animate, inView, stagger } from "motion"
 import { useEffect } from "react"
 import { classes } from "../../../utils/utils"
 
-function List() {
+export default function List() {
   useEffect(() => {
     inView(".services-animation", ({ target }) => {
       animate(
@@ -112,5 +112,3 @@ function List() {
     </div>
   )
 }
-
-export default List

@@ -22,7 +22,7 @@ export async function getStaticProps() {
   return { props: { gallery: gallery.items }, revalidate: 10 }
 }
 
-function Home({ gallery }) {
+export default function Home({ gallery }) {
   return (
     <Fragment>
       <Navbar />
@@ -37,5 +37,3 @@ function Home({ gallery }) {
     </Fragment>
   )
 }
-
-export default Home

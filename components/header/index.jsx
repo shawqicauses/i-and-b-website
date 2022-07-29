@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useEffect } from "react"
 import { classes, url } from "../../utils/utils"
 
-function Header({ gallery }) {
+export default function Header({ gallery }) {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -120,5 +120,3 @@ function Header({ gallery }) {
     </header>
   )
 }
-
-export default Header

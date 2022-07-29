@@ -1,7 +1,7 @@
 import { classes } from "../../utils/utils"
 import List from "./list"
 
-function Gallery({ gallery }) {
+export default function Gallery({ gallery }) {
   return (
     <section
       id="gallery"
@@ -15,5 +15,3 @@ function Gallery({ gallery }) {
     </section>
   )
 }
-
-export default Gallery

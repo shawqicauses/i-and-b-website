@@ -35,13 +35,14 @@ function Services() {
         <div
           className={classes(
             "flex flex-col items-start justify-start",
-            "mb-12 md:mb-16 md:items-center md:justify-center lg:mb-20"
+            "md:items-center md:justify-center",
+            "mb-10 md:mb-[3.75rem] lg:mb-20"
           )}>
           <p
             className={classes(
               "sub-heading-animation text-base font-medium leading-none",
-              "mb-5 uppercase tracking-[0.3em] text-zinc-500",
-              "translate-y-4 transform opacity-0 md:text-lg"
+              "mb-3 uppercase tracking-[0.3em] text-zinc-500",
+              "translate-y-4 transform opacity-0 md:mb-5 md:text-lg"
             )}>
             Company Services
           </p>

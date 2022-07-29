@@ -12,8 +12,8 @@ function Inspection({ gallery }) {
       <div
         className={classes(
           "wrapper flex h-auto w-full flex-col",
-          "items-center justify-center gap-8",
-          "md:gap-10 lg:flex-row lg:gap-14"
+          "items-center justify-center gap-20",
+          "lg:flex-row lg:gap-10"
         )}>
         <div className={classes("relative aspect-square w-full flex-1")}>
           <Image
@@ -28,13 +28,13 @@ function Inspection({ gallery }) {
           />
         </div>
         <div className={classes("flex-1")}>
-          <h2 className={classes("title-2 mb-6 max-w-xs lg:mb-10")}>
+          <h2 className={classes("title-2 mb-5 max-w-xs lg:mb-10")}>
             Worried you may have asbestos removal?
           </h2>
           <h3
             className={classes(
               "text-xl font-medium leading-tight",
-              "mb-3 text-zinc-900 lg:text-xl-2"
+              "mb-3 text-zinc-900 lg:mb-5 lg:text-xl-2"
             )}>
             Honest site inspection
           </h3>
@@ -42,17 +42,17 @@ function Inspection({ gallery }) {
             className={classes(
               "text-base font-normal leading-relaxed",
               "text-left text-zinc-500 no-underline",
-              "mb-6 not-italic lg:text-lg"
+              "mb-6 not-italic lg:mb-10 lg:text-lg"
             )}>
-            At I & B Asbestos Removal Service. We flatter ourselves on providing
-            our customers with a comprehensive and honest site inspection to
-            assess your property for the presence of asbestos-containing
-            materials
+            At I and B Asbestos Removal Service. We flatter ourselves on
+            providing our customers with a comprehensive and honest site
+            inspection to assess your property for the presence of
+            asbestos-containing materials
           </p>
           <h3
             className={classes(
               "text-xl font-medium leading-tight",
-              "mb-3 text-zinc-900 lg:text-xl-2"
+              "mb-3 text-zinc-900 lg:mb-5 lg:text-xl-2"
             )}>
             For your Melbourne home
           </h3>
@@ -60,7 +60,7 @@ function Inspection({ gallery }) {
             className={classes(
               "text-base font-normal leading-relaxed",
               "text-left text-zinc-500 no-underline",
-              "mb-6 not-italic lg:text-lg"
+              "not-italic lg:text-lg"
             )}>
             Asbestos products can destroy your health and the broader community
             if they are not properly maintained or removed and disposed of

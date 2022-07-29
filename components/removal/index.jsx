@@ -35,7 +35,7 @@ function Removal({ gallery }) {
         <div
           className={classes(
             "relative aspect-square max-w-full",
-            "mb-10 md:aspect-video lg:mb-20"
+            "mb-20 md:aspect-video lg:mb-[7.5rem] xl:mb-[8.75rem]"
           )}>
           <Image
             src={gallery && url(gallery[5].fields.image.fields.file.url)}
@@ -59,13 +59,14 @@ function Removal({ gallery }) {
               "flex-col items-start justify-start",
               "translate-y-4 transform opacity-0"
             )}>
-            <h2 className={classes("title-2 mb-3 max-w-xs")}>
+            <h2 className={classes("title-2 mb-5 max-w-xs lg:mb-10")}>
               Was your home built before 1987?
             </h2>
             <p
               className={classes(
-                "text-base font-normal leading-relaxed lg:text-lg",
-                "mb-6 text-left not-italic text-zinc-500 no-underline"
+                "text-base font-normal leading-relaxed",
+                "text-left not-italic text-zinc-500 no-underline",
+                "mb-3 lg:mb-5 lg:text-lg"
               )}>
               Approximately, there is one-third of all homes in Australia
               contain some asbestos products
@@ -87,8 +88,9 @@ function Removal({ gallery }) {
             )}>
             <p
               className={classes(
-                "text-base font-normal leading-relaxed lg:text-lg",
-                "mb-6 text-left not-italic text-zinc-500 no-underline"
+                "text-base font-normal leading-relaxed",
+                "text-left not-italic text-zinc-500 no-underline",
+                "mb-5 lg:mb-10 lg:text-lg"
               )}>
               If your house was constructed or reconditioned before the
               mid-1980s, it potentially contains asbestos products. As a guide,

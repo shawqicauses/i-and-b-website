@@ -38,12 +38,14 @@ function About() {
             )}>
             <p
               className={classes(
-                "text-base font-medium leading-none lg:text-lg",
-                "mb-3 uppercase tracking-[0.3em] text-zinc-500"
+                "text-base font-medium leading-none",
+                "uppercase tracking-[0.3em] text-zinc-500",
+                "mb-3 lg:mb-5 lg:text-lg"
               )}>
               Hmm, who are we
             </p>
-            <h2 className={classes("title-2 mb-6 max-w-xs md:max-w-sm")}>
+            <h2
+              className={classes("title-2 mb-5 max-w-xs md:max-w-sm lg:mb-10")}>
               We are professional in asbestos removal
             </h2>
             <p
@@ -66,14 +68,15 @@ function About() {
             <h3
               className={classes(
                 "text-xl font-medium leading-tight",
-                "mb-3 text-zinc-900 lg:text-xl-2"
+                "mb-3 text-zinc-900 lg:mb-5 lg:text-xl-2"
               )}>
               We are skilled enough to ...
             </h3>
             <p
               className={classes(
-                "text-base font-normal leading-relaxed lg:text-lg",
-                "mb-10 text-left not-italic text-zinc-500 no-underline"
+                "text-base font-normal leading-relaxed",
+                "text-left not-italic text-zinc-500 no-underline",
+                "mb-6 lg:mb-10 lg:text-lg"
               )}>
               Remove and access asbestos in all ceilings, internal walls, and
               floor coverings. We also target outside areas, like external
@@ -82,7 +85,7 @@ function About() {
             <h3
               className={classes(
                 "text-xl font-medium leading-tight",
-                "mb-3 text-zinc-900 lg:text-xl-2"
+                "mb-3 text-zinc-900 lg:mb-5 lg:text-xl-2"
               )}>
               We perform for your safety
             </h3>

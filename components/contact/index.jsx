@@ -64,11 +64,10 @@ function Contact() {
     <Link key={index} href={to}>
       <a
         className={classes(
-          "item-animation group flex",
-          "items-center justify-center gap-5",
-          "rounded-lg bg-teal-400 px-8 py-6",
-          "text-white outline-none",
-          "translate-y-4 transform opacity-0",
+          "item-animation group outline-none",
+          "flex flex-row items-center justify-center",
+          "rounded-lg bg-teal-400 px-8 py-6 text-white",
+          "translate-y-4 transform gap-5 opacity-0",
           "lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0"
         )}>
         <div
@@ -95,8 +94,8 @@ function Contact() {
     <section
       className={classes(
         "contact-animation flex bg-teal-500",
-        "items-center justify-center",
-        "mb-12 py-10 lg:mb-20 lg:py-12 xl:mb-[5.75rem] xl:py-16"
+        "mb-12 items-center justify-center py-10",
+        "lg:mb-20 lg:py-12 xl:mb-[5.75rem] xl:py-16"
       )}>
       <div
         className={classes(

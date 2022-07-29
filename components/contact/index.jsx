@@ -30,7 +30,7 @@ export default function Contact() {
   const information = [
     {
       name: "Phone Number",
-      to: "tel:00970598182008",
+      to: "tel:61411228870",
       icon: (
         <PhoneIcon
           className={classes("h-6 w-6 stroke-current")}
@@ -40,7 +40,7 @@ export default function Contact() {
     },
     {
       name: "Company E-mail",
-      to: "mailto:shawqicause@outloook.com",
+      to: "mailto:info@iandbasbestosremoval.com.au",
       icon: (
         <MailIcon
           className={classes("h-6 w-6 stroke-current")}

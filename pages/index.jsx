@@ -15,8 +15,8 @@ import { useContent } from "../context"
 
 export async function getStaticProps() {
   const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID || "",
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || ""
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
   })
 
   const gallery = await client.getEntries({ content_type: "gallery" })

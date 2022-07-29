@@ -1,10 +1,10 @@
-import { Provider } from "../context"
+import { Layout } from "../components/components"
 import "../styles/globals.css"
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Provider>
+    <Layout>
       <Component {...pageProps} />
-    </Provider>
+    </Layout>
   )
 }

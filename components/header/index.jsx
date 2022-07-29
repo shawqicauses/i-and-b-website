@@ -2,9 +2,9 @@ import { LinkIcon, PaperClipIcon } from "@heroicons/react/outline"
 import { animate, inView } from "motion"
 import Link from "next/link"
 import { useEffect } from "react"
-import { classes } from "../../utils/utils"
+import { classes, url } from "../../utils/utils"
 
-function Header() {
+function Header({ gallery }) {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -32,8 +32,7 @@ function Header() {
   })
 
   const color = `rgba(0, 0, 0, 0.7)`
-  const id = `photo-1587582423116-ec07293f0395`
-  const image = `https://images.unsplash.com/${id}`
+  const image = gallery && url(gallery[6].fields.image.fields.file.url)
   const background = `linear-gradient(to right bottom, ${color}, ${color}), url("${image}")`
 
   const buttons = [

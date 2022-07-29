@@ -1,9 +1,9 @@
 import { animate, inView, stagger } from "motion"
 import Image from "next/image"
 import { useEffect } from "react"
-import { classes } from "../../utils/utils"
+import { classes, url } from "../../utils/utils"
 
-function Removal() {
+function Removal({ gallery }) {
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -39,7 +39,7 @@ function Removal() {
               "md:mb-20 md:aspect-video"
             )}>
             <Image
-              src="https://images.unsplash.com/photo-1564182842834-681b7be6de4b"
+              src={gallery && url(gallery[5].fields.image.fields.file.url)}
               alt="Asbestos Removal"
               layout="fill"
               objectFit="cover"

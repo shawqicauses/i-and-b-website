@@ -1,7 +1,10 @@
 import Image from "next/image"
+import { useContent } from "../../context"
 import { classes, url } from "../../utils/utils"
 
-export default function Inspection({ gallery }) {
+export default function Inspection() {
+  const { content } = useContent()
+
   return (
     <section
       id="inspection"
@@ -16,16 +19,18 @@ export default function Inspection({ gallery }) {
           "lg:flex-row lg:gap-10"
         )}>
         <div className={classes("relative aspect-square w-full flex-1")}>
-          <Image
-            src={gallery && url(gallery[8].fields.image.fields.file.url)}
-            alt="Asbestos Removal"
-            layout="fill"
-            className={classes(
-              "image-animation h-full w-full",
-              "transform object-cover object-center",
-              "translate-y-4 translate-x-0 opacity-0"
-            )}
-          />
+          {content.gallery && (
+            <Image
+              src={url(content.gallery[8].fields.image.fields.file.url)}
+              alt="Asbestos Removal"
+              layout="fill"
+              className={classes(
+                "image-animation h-full w-full",
+                "transform object-cover object-center",
+                "translate-y-4 translate-x-0 opacity-0"
+              )}
+            />
+          )}
         </div>
         <div
           className={classes(

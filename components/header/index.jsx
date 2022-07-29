@@ -2,9 +2,12 @@ import { LinkIcon, PaperClipIcon } from "@heroicons/react/outline"
 import { animate, inView } from "motion"
 import Link from "next/link"
 import { useEffect } from "react"
+import { useContent } from "../../context"
 import { classes, url } from "../../utils/utils"
 
-export default function Header({ gallery }) {
+export default function Header() {
+  const { content } = useContent()
+
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -32,7 +35,8 @@ export default function Header({ gallery }) {
   })
 
   const color = `rgba(0, 0, 0, 0.8)`
-  const image = gallery && url(gallery[6].fields.image.fields.file.url)
+  const image =
+    content.gallery && url(content.gallery[6].fields.image.fields.file.url)
   const background = `linear-gradient(to right bottom, ${color}, ${color}), url("${image}")`
 
   const buttons = [

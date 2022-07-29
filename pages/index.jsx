@@ -1,5 +1,5 @@
 import { createClient } from "contentful"
-import { Fragment } from "react"
+import { Fragment, useEffect } from "react"
 import {
   About,
   Contact,
@@ -11,6 +11,7 @@ import {
   Removal,
   Services
 } from "../components/components"
+import { useContent } from "../context"
 
 export async function getStaticProps() {
   const client = createClient({
@@ -23,16 +24,21 @@ export async function getStaticProps() {
 }
 
 export default function Home({ gallery }) {
+  const { setContent } = useContent()
+  useEffect(() => {
+    setContent((...previous) => ({ ...previous, gallery }))
+  }, [setContent, gallery])
+
   return (
     <Fragment>
       <Navbar />
-      <Header gallery={gallery} />
+      <Header />
       <Contact />
       <Services />
-      <Gallery gallery={gallery} />
+      <Gallery />
       <About />
-      <Removal gallery={gallery} />
-      <Inspection gallery={gallery} />
+      <Removal />
+      <Inspection />
       <Footer />
     </Fragment>
   )

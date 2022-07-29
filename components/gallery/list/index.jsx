@@ -1,9 +1,12 @@
 import { animate, inView, stagger } from "motion"
 import Image from "next/image"
 import { useEffect } from "react"
+import { useContent } from "../../../context"
 import { classes, url } from "../../../utils/utils"
 
-export default function List({ gallery }) {
+export default function List() {
+  const { content } = useContent()
+
   useEffect(() => {
     inView(".gallery-animation", ({ target }) => {
       animate(
@@ -19,8 +22,8 @@ export default function List({ gallery }) {
   })
 
   const items =
-    gallery &&
-    gallery.map((item, index) => (
+    content.gallery &&
+    content.gallery.map((item, index) => (
       <div key={index} className={classes("relative aspect-square w-full")}>
         <Image
           src={url(item.fields.image.fields.file.url)}

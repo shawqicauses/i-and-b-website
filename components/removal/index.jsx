@@ -1,9 +1,12 @@
 import { animate, inView, stagger } from "motion"
 import Image from "next/image"
 import { useEffect } from "react"
+import { useContent } from "../../context"
 import { classes, url } from "../../utils/utils"
 
-export default function Removal({ gallery }) {
+export default function Removal() {
+  const { content } = useContent()
+
   useEffect(() => {
     const animation = { opacity: 1, transform: "none" }
     const duration = 0.4
@@ -37,16 +40,18 @@ export default function Removal({ gallery }) {
             "relative aspect-square max-w-full",
             "mb-20 md:aspect-video lg:mb-[7.5rem] xl:mb-[8.75rem]"
           )}>
-          <Image
-            src={gallery && url(gallery[5].fields.image.fields.file.url)}
-            alt="Asbestos Removal"
-            layout="fill"
-            className={classes(
-              "image-animation h-full w-full",
-              "transform object-cover object-center",
-              "translate-y-4 translate-x-0 opacity-0"
-            )}
-          />
+          {content.gallery && (
+            <Image
+              src={url(content.gallery[5].fields.image.fields.file.url)}
+              alt="Asbestos Removal"
+              layout="fill"
+              className={classes(
+                "image-animation h-full w-full",
+                "transform object-cover object-center",
+                "translate-y-4 translate-x-0 opacity-0"
+              )}
+            />
+          )}
         </div>
         <div
           className={classes(

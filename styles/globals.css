@@ -35,7 +35,7 @@
   }
 
   .button-primary {
-    @apply rounded-lg border-teal-500 bg-teal-500
+    @apply rounded-lg border-teal-700 bg-teal-700
     text-white hover:border-white hover:bg-white
     hover:text-zinc-900 focus:border-zinc-900 focus:bg-zinc-900 focus:text-white;
   }

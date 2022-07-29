@@ -33,13 +33,15 @@ export default function Navbar() {
   ]
 
   const items = links.map(({ name, to }, index) => (
-    <Link key={index} href={to}>
-      <div
-        className={classes(
-          "link-animation cursor-pointer",
-          "translate-y-4 transform opacity-0"
-        )}>
+    <li
+      key={index}
+      className={classes(
+        "link-animation cursor-pointer",
+        "translate-y-4 transform opacity-0"
+      )}>
+      <Link href={to}>
         <a
+          href={to}
           className={classes(
             "inline-block text-base font-medium leading-none",
             "uppercase tracking-[0.2em] text-white",
@@ -50,8 +52,8 @@ export default function Navbar() {
           )}>
           {name}
         </a>
-      </div>
-    </Link>
+      </Link>
+    </li>
   ))
 
   return (

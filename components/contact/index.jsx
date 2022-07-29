@@ -61,33 +61,35 @@ export default function Contact() {
   ]
 
   const items = information.map(({ name, to, icon }, index) => (
-    <Link key={index} href={to}>
-      <a
-        className={classes(
-          "item-animation group outline-none",
-          "flex flex-row items-center justify-center",
-          "rounded-lg bg-teal-400 px-8 py-6 text-white",
-          "translate-y-4 transform gap-5 opacity-0",
-          "lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0"
-        )}>
-        <div
+    <li key={index}>
+      <Link href={to}>
+        <a
           className={classes(
-            "flex items-center justify-center text-white",
-            "lg:h-12 lg:w-12 lg:rounded-full lg:bg-teal-600 lg:transition",
-            "lg:group-hover:bg-teal-700 lg:group-hover:text-white"
+            "item-animation group outline-none",
+            "flex flex-row items-center justify-center",
+            "rounded-lg bg-teal-400 px-8 py-6 text-white",
+            "translate-y-4 transform gap-5 opacity-0",
+            "lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0"
           )}>
-          {icon}
-        </div>
-        <span
-          className={classes(
-            "text-lg font-medium leading-none md:text-xl",
-            "not-italic text-current text-white no-underline",
-            "group-focus:decoration-teal-700 group-focus:decoration-2"
-          )}>
-          {name}
-        </span>
-      </a>
-    </Link>
+          <div
+            className={classes(
+              "flex items-center justify-center text-white",
+              "lg:h-12 lg:w-12 lg:rounded-full lg:bg-teal-600 lg:transition",
+              "lg:group-hover:bg-teal-700 lg:group-hover:text-white"
+            )}>
+            {icon}
+          </div>
+          <span
+            className={classes(
+              "text-lg font-medium leading-none md:text-xl",
+              "not-italic text-current text-white no-underline",
+              "group-focus:decoration-teal-700 group-focus:decoration-2"
+            )}>
+            {name}
+          </span>
+        </a>
+      </Link>
+    </li>
   ))
 
   return (
@@ -97,13 +99,13 @@ export default function Contact() {
         "mb-12 items-center justify-center py-10",
         "lg:mb-20 lg:py-12 xl:mb-[5.75rem] xl:py-16"
       )}>
-      <div
+      <ul
         className={classes(
           "wrapper grid grid-cols-1 gap-5",
           "md:grid-cols-2 lg:grid-cols-3 lg:gap-10"
         )}>
         {items}
-      </div>
+      </ul>
     </section>
   )
 }
